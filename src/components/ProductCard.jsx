@@ -1,6 +1,6 @@
 import Buttons from './Buttons';
 
-// 1. Importando cada imagem estaticamente. existe uma maneira melhor?
+// 1. Importando cada imagem estaticamente. existe uma maneira mais facil
 import waffleImg from '/src/assets/image-waffle-tablet.jpg';
 import cakeImg from '/src/assets/image-cake-mobile.jpg';
 import brownieImg from '/src/assets/image-brownie-desktop.jpg';

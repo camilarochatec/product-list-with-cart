@@ -1,7 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ProductCard from './components/ProductCard';
 import Carrinho from './components/Carrinho';
 import ModalConfirmacao from './components/ModalConfirmacao';
+
+//aqui vamos fazer a requisição
+//recomendado é criar primeiro uma função dentro faz um fetch da api e o tratmento .then. mas não vamos usar essa funcao direto na parte logica do nosso compoennte. pois pode ser preciso montar e desmontar e assim a requisiçao seja refeita. não é o que queremos, por isso vamos usar um use effect
+// os produtos vão ficar com use state para que o componente possa renderizar.
+//o spread seria um desmonte de obejto
+const [produtos, setProdutos] = useState([])
+
+function buscarProdutos(){
+  fetch("#")
+  .then(resposta=> resposta.json())
+  .then(json =>{
+    setProdutos
+  })
+}
+
+useEffect(()=>{
+  buscarProdutos();
+}, []);
 
 const produtosIniciais = [
   {
@@ -94,6 +112,7 @@ function App() {
         <div className="lg:w-2/3">
           <h1 className="text-4xl font-bold text-rose-900 mb-8">Sobremesas</h1>
           
+          {/* div dos produtos */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
             {produtosIniciais.map((produto) => (
               <ProductCard 
@@ -108,6 +127,7 @@ function App() {
           </div>
         </div>
 
+        {/* div do carrinho  e do modal de confirmação*/}
         <div className="lg:w-1/3 mt-8 lg:mt-0">
           <Carrinho 
             itens={carrinho}
