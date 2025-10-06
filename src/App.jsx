@@ -7,19 +7,20 @@ import ModalConfirmacao from './components/ModalConfirmacao';
 //recomendado é criar primeiro uma função dentro faz um fetch da api e o tratmento .then. mas não vamos usar essa funcao direto na parte logica do nosso compoennte. pois pode ser preciso montar e desmontar e assim a requisiçao seja refeita. não é o que queremos, por isso vamos usar um use effect
 // os produtos vão ficar com use state para que o componente possa renderizar.
 //o spread seria um desmonte de obejto
-const [produtos, setProdutos] = useState([])
+//o que vai fazer a logica será o componente carrinho
+// const [produtos, setProdutos] = useState([])
 
-function buscarProdutos(){
-  fetch("#")
-  .then(resposta=> resposta.json())
-  .then(json =>{
-    setProdutos
-  })
-}
+// function buscarProdutos(){
+//   fetch("#")
+//   .then(resposta=> resposta.json())
+//   .then(json =>{
+//     setProdutos
+//   })
+// }
 
-useEffect(()=>{
-  buscarProdutos();
-}, []);
+// useEffect(()=>{
+//   buscarProdutos();
+// }, []);
 
 const produtosIniciais = [
   {
