@@ -1,50 +1,53 @@
 import Buttons from './Buttons';
+import { CartContext } from '../contexts/CartContext';
+import { useContext } from 'react'; 
 
-// 1. Importando cada imagem estaticamente. existe uma maneira mais facil
-import waffleImg from '/src/assets/image-waffle-tablet.jpg';
-import cakeImg from '/src/assets/image-cake-mobile.jpg';
-import brownieImg from '/src/assets/image-brownie-desktop.jpg';
+// O ProductCard usa o useContext para buscar as funções e o estado do item, passando-os para o Buttons.
+const ProductCard = ({ produto }) => {
 
-// 2. Criando um "mapa" para associar o nome do arquivo à imagem importada
-const mapDeImagens = {
-  'image-waffle-tablet.jpg': waffleImg,
-  'image-cake-mobile.jpg': cakeImg,
-  'image-brownie-desktop.jpg': brownieImg,
-};
+    // Acessa as funções e o estado do contexto
+    const { 
+        adicionarAoCarrinho, 
+        aumentarQuantidade, 
+        diminuirQuantidade, 
+        getItemNoCarrinho 
+    } = useContext(CartContext);
 
-//aqui temos o nosso card. nele terá uma img, botão + e -, categoria nome do produto e o preco. por meio de props vamos ter a funcao do botão de adicionar, ter o item no carrinho,aumentar e diminuir itens no botão. assim deixamos o card totalmente reutilizavel.
-function ProductCard({ produto, onAdicionarAoCarrinho, onAumentarQuantidade, onDiminuirQuantidade, itemNoCarrinho }) {
-  return (
-    <div>
-      <div className="relative">
-        <img
-          // 3. Usando o mapa para encontrar a imagem correta
-          src={mapDeImagens[produto.imagem]}
-          alt={produto.nome}
-          // {/* o itemNoCarrinho foi criado no app.jsx, para que quando usar o metodo find() possa dar true ou false*/}
-          className={`w-full h-48 object-cover rounded-lg transition-all ${itemNoCarrinho ? 'border-2 border-red-500' : 'border-2 border-transparent'}`}
-        />
+    
+    // 4. Verifica se este produto está no carrinho usando o ID
+    const itemNoCarrinho = getItemNoCarrinho(produto.id);
 
-        {/* div do botão */}
-        <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[160px]">
-         {/* //aqui criamos uma logica para q a imagem do card fique com uma borda red ao ser selecionado quando vai ao carrinho */}
-          <Buttons
-            itemNoCarrinho={itemNoCarrinho}
-            adicionar={() => onAdicionarAoCarrinho(produto)}
-            aumentar={() => onAumentarQuantidade(produto.id)}
-            diminuir={() => onDiminuirQuantidade(produto.id)}
-          />
+    return (
+        <div>
+            <div className="relative">
+                <img
+                    src={produto.image}
+                    alt={produto.name}
+                    // Borda condicional
+                    className={`w-full h-48 object-cover rounded-lg transition-all ${itemNoCarrinho ? 'border-2 border-red-500' : 'border-2 border-transparent'}`}
+                />
+                {/* div do botão */}
+                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[160px]">
+                    <Buttons
+                        itemNoCarrinho={itemNoCarrinho} 
+                        adicionar={() => adicionarAoCarrinho(produto)} // Passa o produto completo ao adicionar
+                        aumentar={() => aumentarQuantidade(produto.id)}       // Passa o ID ao aumentar
+                        diminuir={() => diminuirQuantidade(produto.id)}       // Passa o ID ao diminuir
+                    />
+                </div>
+            </div>
+            <div className="mt-8 text-center">
+                <p className="text-sm text-rose-400">{produto.category}</p>
+                <h2 className="font-semibold text-rose-900">{produto.name}</h2>
+                <p className="font-semibold text-red-500">
+                    {produto.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+                </p>
+            </div>
         </div>
-      </div>
-      <div className="mt-8">
-        <p className="text-sm text-rose-400">{produto.categoria}</p>
-        <h2 className="font-semibold text-rose-900">{produto.nome}</h2>
-        <p className="font-semibold text-red-500">R${produto.preco.toFixed(2)}</p> 
-        {/* o toFixed() serve para deixar duas casas decimais no preço */}
-      </div>
-    </div>
-  );
+    );
 }
 
 export default ProductCard;
+
+
 

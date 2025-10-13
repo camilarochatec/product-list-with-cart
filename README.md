@@ -5,6 +5,8 @@
 **[🔗 Acesse a demonstração ao vivo aqui](https://www.google.com/search?q=https://%23)** 
 -----
 
+![Image](https://github.com/user-attachments/assets/925ce530-75ee-41f6-b047-d408ecfdf273)
+
 ### ✨ Principais Funcionalidades
 
   - **Listagem Dinâmica de Produtos:** Os produtos são renderizados a partir de uma lista de dados, facilitando a adição de novos itens.
@@ -16,6 +18,7 @@
       - O carrinho é atualizado instantaneamente a cada ação do usuário.
       - Cálculo automático do valor total do pedido.
       - Remover itens individualmente.
+      - incluir ou remover cupom
   - **Modal de Confirmação:** Antes de finalizar a compra, um modal elegante exibe um resumo do pedido para confirmação do usuário.
   - **Design Responsivo:** A interface se adapta perfeitamente a dispositivos móveis, tablets e desktops, utilizando as vantagens do Tailwind CSS.
   - **Arquitetura Limpa:** O código é organizado em componentes reutilizáveis e com responsabilidades bem definidas (`ProductCard`, `Carrinho`, `Buttons`, etc.), com o estado centralizado no componente principal `App.jsx`.
@@ -41,7 +44,7 @@ Para rodar este projeto em sua máquina, siga os passos abaixo:
 1.  **Clone o repositório:**
 
     ```bash
-    git clone https://github.com/seu-usuario/nome-do-repositorio.git
+    git clone https://github.com/camilarochatec/product-list-with-cart.git
     ```
 
 2.  **Navegue até o diretório do projeto:**
@@ -78,6 +81,6 @@ Para rodar este projeto em sua máquina, siga os passos abaixo:
 
 ### ✉️ Contato
 
-**[Seu Nome]**
+**Camila Rocha**
 
-  - **LinkedIn:** [linkedin.com/in/seu-usuario](https://www.google.com/search?q=https://linkedin.com/in/seu-usuario)'
+  - **LinkedIn:** [linkedin.com/in/seu-usuario](www.linkedin.com/in/camilarochatec)'

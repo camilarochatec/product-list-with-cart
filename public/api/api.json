@@ -1,32 +1,65 @@
 [
   {
     "id": 1,
-    "name": "Classic Waffle",
+    "name": "Waffle Tradicional",
     "category": "Waffles",
     "price": 10.50,
-    "image": {
-      "mobile": "./assets/image-waffle-mobile.jpg",
-      "desktop": "./assets/image-waffle-desktop.jpg"
-    }
+    "image":  "src/assets/image-waffle-desktop.jpg"
   },
   {
     "id": 2,
-    "name": "Vanilla Bean Crème Brûlée",
-    "category": "Crème Brûlée",
-    "price": 7.25,
-    "image": {
-      "mobile": "./assets/image-creme-brulee-mobile.jpg",
-      "desktop": "./assets/image-creme-brulee-desktop.jpg"
-    }
+    "name": "Creme Brûlée de Baunilha",
+    "category": "Creme Brûlée",
+    "price": 17.50,
+    "image":  "src/assets/image-creme-brulee-desktop.jpg"
   },
   {
     "id": 3,
-    "name": "Macaron Medley",
+    "name": "Macaron",
     "category": "Macarons",
     "price": 12.00,
-    "image": {
-      "mobile": "./assets/image-macaron-mobile.jpg",
-      "desktop": "./assets/image-macaron-desktop.jpg"
-    }
+    "image": "src/assets/image-macaron-desktop.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Doce Folheado de Nozes",
+    "category": "Folheados",
+    "price": 15.00,
+    "image": "src/assets/image-baklava-desktop.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Brownie Tradicional",
+    "category": "Brownies",
+    "price": 10.90,
+    "image":  "src/assets/image-brownie-desktop.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Bolo Red Velvet",
+    "category": "Bolos",
+    "price": 13.00,
+    "image":  "src/assets/image-cake-desktop.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Torta de Merengue",
+    "category": "Tortas",
+    "price": 12.00,
+    "image":  "src/assets/image-meringue-desktop.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Panacota",
+    "category": "Doces",
+    "price": 8.90,
+    "image": "src/assets/image-panna-cotta-desktop.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Tiramisu",
+    "category": "Tortas",
+    "price": 12.00,
+    "image": "src/assets/image-tiramisu-desktop.jpg"
   }
 ]
