@@ -69,16 +69,6 @@ Para rodar este projeto em sua máquina, siga os passos abaixo:
 
 -----
 
-### 👨‍💻 O Que Aprendi e Demonstrei
-
-  - **Gerenciamento de Estado com Hooks:** Utilização eficaz do `useState` para controlar o estado do carrinho e do modal, mantendo a UI sincronizada com os dados.
-  - **Fluxo de Dados Unidirecional:** A passagem de dados e funções (props) de componentes pais para filhos (`App` -\> `Carrinho` -\> `ItemCarrinho`) e a comunicação de eventos de filhos para pais (ex: `onRemoverItem`).
-  - **Componentização e Reutilização:** Criação de componentes especializados e reutilizáveis, como `ProductCard` e `Buttons`, o que torna o código mais limpo e escalável.
-  - **Renderização Condicional:** Lógica para exibir diferentes elementos da interface com base no estado da aplicação (ex: mostrar o botão "Comprar" ou os controles de quantidade).
-  - **Manipulação de Arrays em JavaScript:** Uso avançado de métodos como `.map`, `.find`, `.filter` e `.reduce` de forma imutável para gerenciar o estado do carrinho, uma prática essencial em React.
-
------
-
 ### ✉️ Contato
 
 **Camila Rocha**
