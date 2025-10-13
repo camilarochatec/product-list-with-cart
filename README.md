@@ -2,7 +2,7 @@
 
 > Este é um projeto de front-end que simula uma página de produtos de uma loja de sobremesas, com um carrinho de compras totalmente interativo. O foco foi criar uma experiência de usuário limpa, responsiva e uma arquitetura de código componentizada e de fácil manutenção, utilizando as melhores práticas do React.
 
-**[🔗 Acesse a demonstração ao vivo aqui](https://www.google.com/search?q=https://%23)** 
+**[🔗 Acesse a demonstração ao vivo aqui](product-list-with-cart-seven-ruby.vercel.app)** 
 -----
 
 ![Image](https://github.com/user-attachments/assets/925ce530-75ee-41f6-b047-d408ecfdf273)
