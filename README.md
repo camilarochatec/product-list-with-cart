@@ -12,10 +12,8 @@ Este é um projeto de front-end que simula uma página de produtos de uma loja d
 
 ---
 
-<p align="center">
-  <img src="https://via.placeholder.com/800x400.png?text=Coloque+um+Print+do+seu+Site+Aqui" alt="Demonstração da Tela" width="100%">
   ![Image](https://github.com/user-attachments/assets/a9f66de0-afec-474b-806f-ac949d740e13)
-</p>
+
 
 ---
 
