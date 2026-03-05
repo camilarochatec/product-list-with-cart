@@ -6,7 +6,7 @@
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 
-> 🔗 **[product-list-with-cart-j6cv8wmt7-camilaroch93s-projects.vercel.app](#)**
+> 🔗 **[https://product-list-with-cart-seven-ruby.vercel.app](#)**
 
 Este é um projeto de front-end que simula uma página de produtos de uma loja de sobremesas, com um carrinho de compras totalmente interativo. O foco foi criar uma experiência de usuário limpa, responsiva e uma arquitetura de código componentizada e de fácil manutenção, utilizando as melhores práticas do React e **Cultura DevOps aplicada**.
 
@@ -80,4 +80,4 @@ Acesse no navegador: http://localhost:5173
 ✉️ Contato
 Camila Rocha Tech Lead & Desenvolvedora de Software
 
-💼 LinkedIn: linkedin.com/in/camilatec (Coloque seu link aqui) 🐙 GitHub: github.com/camilarochatec
+💼 LinkedIn: www.linkedin.com/in/camilarochatec
