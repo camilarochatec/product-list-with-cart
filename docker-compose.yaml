@@ -1,0 +1,11 @@
+services:
+  #define o serviço para a aplicação frontend
+  frontend:
+    image: emilycarla/carrinho-squad10:v1 #nome da imagem e tag para a imagem construída
+    #configura o build da imagem usando o Dockerfile presente no diretório atual
+    build:
+      context: . #indica o diretório onde o Dockerfile está localizado
+      dockerfile: Dockerfile #nome do arquivo
+    ports:
+      - "8080:80"
+    container_name: carrinho-compras-squad10 #nome do contêiner para evitar nomes aleatórios criados automaticamente
