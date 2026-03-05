@@ -1,0 +1,27 @@
+name: Pipeline CI - Squad 10
+
+on:
+  push:
+    branches: [ "main", "master" ]
+
+jobs:
+  integracao-continua:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name:  Baixando o código
+        uses: actions/checkout@v3
+
+      - name: Configurando o Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instalando Dependências
+        run: npm install
+
+      - name: Auditoria de Código (ESLint)
+        run: npm run lint
+
+      - name: Construindo a Aplicação (Build)
+        run: npm run build

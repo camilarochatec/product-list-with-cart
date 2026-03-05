@@ -1,17 +1,14 @@
-// src/App.jsx
-
 import { useState, useEffect } from 'react';
 import ProductCard from './components/ProductCard';
 import CartProvider from './contexts/CartContext';
-import Carrinho from './components/Carrinho'; // Importe o Carrinho
-import ModalConfirmacao from './components/ModalConfirmacao'; // Importe o Modal
+import Carrinho from './components/Carrinho'; 
+import ModalConfirmacao from './components/ModalConfirmacao'; 
 
 const App = () => {
     const [produtos, setProdutos] = useState([]);
-    const [isModalOpen, setIsModalOpen] = useState(false); // Estado para controlar o modal
+    const [isModalOpen, setIsModalOpen] = useState(false); 
 
     function buscarProdutos() {
-        // O ideal é que o arquivo api.json esteja na pasta `public`
         fetch('api/api.json') 
             .then(resposta => resposta.json())
             .then(json => {
@@ -31,6 +28,8 @@ const App = () => {
         setIsModalOpen(false);
         // A lógica de limpar o carrinho já está no Modal e no Contexto!
     };
+
+   
 
     return (
         <CartProvider>
