@@ -1,0 +1,1 @@
+Infraestrutura criada automaticamente com Terraform.
