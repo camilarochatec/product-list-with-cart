@@ -1,76 +1,83 @@
-### 🛒 Carrinho de Compras para Loja de Sobremesas (React + Tailwind CSS)
+# 🛒 Carrinho de Compras - Loja de Sobremesas
 
-> Este é um projeto de front-end que simula uma página de produtos de uma loja de sobremesas, com um carrinho de compras totalmente interativo. O foco foi criar uma experiência de usuário limpa, responsiva e uma arquitetura de código componentizada e de fácil manutenção, utilizando as melhores práticas do React.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 
-**[🔗 Acesse a demonstração ao vivo aqui](product-list-with-cart-seven-ruby.vercel.app)** 
------
+> 🔗 **[product-list-with-cart-j6cv8wmt7-camilaroch93s-projects.vercel.app](#)**
 
-![Image](https://github.com/user-attachments/assets/925ce530-75ee-41f6-b047-d408ecfdf273)
+Este é um projeto de front-end que simula uma página de produtos de uma loja de sobremesas, com um carrinho de compras totalmente interativo. O foco foi criar uma experiência de usuário limpa, responsiva e uma arquitetura de código componentizada e de fácil manutenção, utilizando as melhores práticas do React e **Cultura DevOps aplicada**.
 
-### ✨ Principais Funcionalidades
+---
 
-  - **Listagem Dinâmica de Produtos:** Os produtos são renderizados a partir de uma lista de dados, facilitando a adição de novos itens.
-  - **Interação com o Produto:**
-      - Adicionar itens ao carrinho com um único clique.
-      - O card do produto e o botão mudam de estado visualmente quando o item está no carrinho.
-      - Aumentar e diminuir a quantidade de itens diretamente no card do produto.
-  - **Carrinho de Compras em Tempo Real:**
-      - O carrinho é atualizado instantaneamente a cada ação do usuário.
-      - Cálculo automático do valor total do pedido.
-      - Remover itens individualmente.
-      - incluir ou remover cupom
-  - **Modal de Confirmação:** Antes de finalizar a compra, um modal elegante exibe um resumo do pedido para confirmação do usuário.
-  - **Design Responsivo:** A interface se adapta perfeitamente a dispositivos móveis, tablets e desktops, utilizando as vantagens do Tailwind CSS.
-  - **Arquitetura Limpa:** O código é organizado em componentes reutilizáveis e com responsabilidades bem definidas (`ProductCard`, `Carrinho`, `Buttons`, etc.), com o estado centralizado no componente principal `App.jsx`.
+<p align="center">
+  <img src="https://via.placeholder.com/800x400.png?text=Coloque+um+Print+do+seu+Site+Aqui" alt="Demonstração da Tela" width="100%">
+</p>
 
------
+---
 
-### 🛠️ Tecnologias Utilizadas
+## ✨ Principais Funcionalidades
 
-Este projeto foi construído com tecnologias modernas do ecossistema front-end:
+### 🖥️ Front-end (UI/UX)
+* **Listagem Dinâmica:** Produtos renderizados a partir de uma lista de dados estruturada.
+* **Interação em Tempo Real:** * Adicionar/remover itens com um clique.
+  * O card do produto muda de estado visualmente quando o item está no carrinho.
+  * Aumentar/diminuir quantidades diretamente no card.
+* **Carrinho Inteligente:** Cálculo automático do valor total e gerenciamento de cupons de desconto.
+* **Modal de Confirmação:** Resumo elegante do pedido antes de finalizar a compra.
+* **Design Responsivo:** Interface fluida para Mobile, Tablet e Desktop com Tailwind CSS.
 
-  - **React:** Biblioteca principal para a construção da interface de usuário.
-  - **Vite:** Ferramenta de build moderna e extremamente rápida para o ambiente de desenvolvimento.
-  - **Tailwind CSS:** Framework CSS utility-first para estilização rápida e responsiva.
-  - **React Icons:** Para a utilização de ícones vetoriais de alta qualidade.
-  - **JavaScript (ES6+):** Lógica da aplicação, com uso de recursos como a sintaxe de *spread* (`...`), métodos de array (`.map`, `.find`, `.reduce`) e Hooks do React (`useState`).
+### ⚙️ Cultura DevOps & Qualidade (Diferenciais)
+* **Shift-Left Quality:** Validação rigorosa de código com **ESLint** para barrar "código morto".
+* **Padronização de Ambiente:** Uso de **Docker** e `docker-compose` (Multi-stage build com Nginx) para eliminar a síndrome do "na minha máquina funciona".
+* **Integração Contínua (CI):** Esteira automatizada com **GitHub Actions** que valida a integridade do código e realiza o *build* a cada novo *push*.
+* **Infraestrutura como Código (IaC):** Prova de conceito (PoC) da gestão de infraestrutura automatizada utilizando **Terraform**.
 
------
+---
 
-### 🚀 Como Executar o Projeto Localmente
+## 🛠️ Tecnologias Utilizadas
 
-Para rodar este projeto em sua máquina, siga os passos abaixo:
+* **React + Vite:** Biblioteca de interface e ferramenta de build ultra-rápida.
+* **Tailwind CSS:** Estilização utility-first.
+* **Docker & Nginx:** Containerização e servidor web de alta performance.
+* **GitHub Actions:** Automação de CI/CD.
+* **Terraform:** Automação de Infraestrutura.
 
-1.  **Clone o repositório:**
+---
 
-    ```bash
-    git clone https://github.com/camilarochatec/product-list-with-cart.git
-    ```
+## 🚀 Como Executar o Projeto Localmente
 
-2.  **Navegue até o diretório do projeto:**
+Clone o repositório em sua máquina:
+```bash
+git clone [https://github.com/camilarochatec/product-list-with-cart.git](https://github.com/camilarochatec/product-list-with-cart.git)
+cd product-list-with-cart
+ocê pode rodar o projeto de duas maneiras:
 
-    ```bash
-    cd nome-do-repositorio
-    ```
+Opção 1: Via Docker (Recomendado 🐳)
+Garante que o projeto rode em um ambiente isolado, idêntico à produção, sem precisar instalar o Node.js na sua máquina.
 
-3.  **Instale as dependências:**
+Certifique-se de que o Docker Desktop está rodando.
 
-    ```bash
-    npm install
-    ```
+No terminal, execute o orquestrador:
 
-4.  **Inicie o servidor de desenvolvimento:**
+Bash
+docker compose up --build
+Acesse no navegador: http://localhost:8080
 
-    ```bash
-    npm run dev
-    ```
+Opção 2: Tradicional (Node.js)
+Instale as dependências:
 
-5.  Abra seu navegador e acesse `http://localhost:5173` (ou a porta indicada no seu terminal).
+Bash
+npm install
+Inicie o servidor de desenvolvimento:
 
------
+Bash
+npm run dev
+Acesse no navegador: http://localhost:5173
 
-### ✉️ Contato
+✉️ Contato
+Camila Rocha Tech Lead & Desenvolvedora de Software
 
-**Camila Rocha**
-
-  - **LinkedIn:** [linkedin.com/in/seu-usuario](www.linkedin.com/in/camilarochatec)'
+💼 LinkedIn: linkedin.com/in/camilatec (Coloque seu link aqui) 🐙 GitHub: github.com/camilarochatec
